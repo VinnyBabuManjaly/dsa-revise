@@ -19,7 +19,7 @@ If not store at location k, which tracks the unique number of elements after pro
 
 Optimal solution: Two pointer
 A read pointer to scan all the elements and see if previous element is same as the current element
-A write pointer that tracks the unique number of elements, and also used as a reference to write unique elementsin place to the nums array 
+A write pointer that tracks the unique number of elements, and also used as a reference to write unique element in place to the nums array 
 condition to be checked: nums[read] == nums[read-1]
     - if not equal, then update the value at write pointer to the found unique element(nums[write] as nums[read]) and increment write pointer by 1
 increment the read pointer to the next element
