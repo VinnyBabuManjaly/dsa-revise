@@ -49,7 +49,7 @@ class RemoveDuplicatesSolver():
             if nums[read] != nums[read-1]:
                 nums[write] = nums[read]
                 write += 1
-        return write, nums[:write]
+        return write
     
 
 if __name__ == "__main__":

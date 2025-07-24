@@ -50,4 +50,5 @@ def longest_substring(s: str) -> int:
         maxLen = max(maxLen, right - left + 1)
     
     return maxLen
-
+    
+# abcbda
