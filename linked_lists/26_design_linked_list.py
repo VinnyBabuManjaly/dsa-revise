@@ -49,38 +49,38 @@ class MyLinkedList:
             return -1
         current = self.head
         for _ in range(index):
-            current = current.next
+            current =  current.next
         return current.val
     
     def addAtHead(self, val: int) -> None:
-        new_node = Node(val)
-        new_node.next = self.head
-        self.head = new_node
+        node = Node(val)
+        node.next = self.head
+        self.head = node
         self.size += 1
         
     def addAtTail(self, val:int) -> None:
-        new_node = Node(val)
+        node = Node(val)
         if not self.head:
-            self.head = new_node
+            self.head = node
         else:
             current = self.head
             while current.next:
                 current = current.next
-            current.next = new_node
+            current.next = node
         self.size += 1
         
     def addAtIndex(self, index: int, val:int) -> None:
         if index < 0 or index > self.size:
             return
-        new_node = Node(val)
+        node = Node(val)
         if index == 0:
             self.addAtHead(val)
             return
         current = self.head
         for _ in range(index-1):
             current = current.next
-        new_node.next = current.next
-        current.next = new_node
+        node.next = current.next
+        current.next = node
         self.size += 1
         
     def deleteAtIndex(self, index:int) -> None:
@@ -93,7 +93,7 @@ class MyLinkedList:
             for _ in range(index-1):
                 current = current.next
             current.next = current.next.next
-        self.size -= 1           
+        self.size -= 1      
             
 """
 0       1        2        3        4
