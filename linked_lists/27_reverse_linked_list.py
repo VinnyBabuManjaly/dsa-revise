@@ -68,4 +68,11 @@ head                        4           3                       1
 
 head.next.next              5->4        4->3        3->2        2->1
 head.next                   4-None      3->None     2->None     1->None
+
+                            h   hn
+r(1)                        1   2
+    r(2)                    2   3
+        r(3)                3   4
+            r(4)            4   5
+                r(5)                                    5
 """

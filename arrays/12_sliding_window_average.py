@@ -37,8 +37,7 @@ def moving_median(nums: list, k: int) -> list:
     
     for window_end in range(len(nums)):
         window_sum += nums[window_end]
-    window_start = 0
-        if window_end - window_sum + 1 == k:    
+        if window_end - window_start + 1 == k:    
             max_sum = max(max_sum, window_sum)
             window_sum -= window_sum[window_start]
             window_start += 1
