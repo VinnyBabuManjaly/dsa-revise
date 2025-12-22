@@ -75,6 +75,9 @@ class lRUCache:
         return -1
     
     def put(self, key:int, val: int) -> None:
+        if self.capacity == 0:
+            return
+        
         node = Node(key, val)
         
         if key in self.cache:
